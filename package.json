@@ -1,0 +1,22 @@
+{
+  "name": "scroll-ocr-word",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/merge.test.js test/rich-text.test.js",
+    "test:browser": "node test/browser.mjs"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "@tesseract.js-data/vie": "1.0.0",
+    "docx": "^9.1.1",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "jszip": "^3.10.2",
+    "playwright": "^1.60.0"
+  }
+}

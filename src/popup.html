@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cuộn OCR → Word</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark">Aa</div>
+        <div><p class="eyebrow">TIỆN ÍCH ĐỌC CHỮ</p><h1>Cuộn OCR <span>→ Word</span></h1></div>
+      </header>
+
+      <p class="intro">Khoanh vùng chữ trên trang. Mỗi lần bạn cuộn hoặc chuyển trang, tiện ích sẽ nhận dạng phần đang thấy và nối vào bản nháp.</p>
+
+      <section class="status-card" aria-live="polite">
+        <div class="status-line"><span id="status-dot" class="dot"></span><strong id="status">Chưa chọn vùng</strong></div>
+        <p id="detail">Chọn vùng chữ để bắt đầu.</p>
+        <div class="stats"><span><b id="scans">0</b> lần quét có chữ mới</span><span><b id="words">0</b> từ</span></div>
+      </section>
+
+      <div class="controls">
+        <button id="select" class="primary">Chọn vùng chữ</button>
+        <button id="toggle" class="secondary" disabled>Tạm dừng</button>
+        <button id="scan" class="secondary" disabled>Quét ngay</button>
+      </div>
+
+      <div class="preview-head"><h2>Bản nháp gần đây</h2><button id="clear" class="text-button" disabled>Xóa chữ</button></div>
+      <div id="preview" class="preview">Chữ nhận dạng sẽ hiện ở đây.</div>
+      <button id="export" class="export" disabled>Xuất file Word (.docx) <span>↗</span></button>
+      <p id="message" class="message" role="status"></p>
+      <footer>Chạy trên máy của bạn · OCR có thể sai dấu, hãy kiểm tra trong Word.</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

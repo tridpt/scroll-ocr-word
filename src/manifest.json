@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Cuộn OCR → Word",
+  "version": "1.0.0",
+  "description": "Chọn vùng chữ trên trang, OCR khi cuộn và xuất văn bản thành Word.",
+  "permissions": ["activeTab", "scripting", "storage", "offscreen"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cuộn OCR → Word"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

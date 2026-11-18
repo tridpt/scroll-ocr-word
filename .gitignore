@@ -1,0 +1,5 @@
+node_modules/
+dist/
+/Scroll-OCR-Word-extension.zip
+/*.traineddata
+
